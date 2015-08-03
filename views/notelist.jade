@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.top
+    h1.
+      Note List
+  div.container
+    div.content
+      ul.list-group
+        each note, i in notelist
+          li.list-group-item
+            a(href='/viewnote?id=#{note._id}')= note.title
+
+      a.btn.btn-default(href='/newnote') New Note

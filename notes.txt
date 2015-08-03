@@ -1,0 +1,16 @@
+attempt at clickable list item:
+input#hiddenId(type="hidden" name="hiddenid" value='#{note._id}')
+a(href='/viewnote?id=#{note._id}')
+
+
+old list:
+ul.list-group
+  each note, i in notelist
+    li.list-group-item
+      a(href='/viewnote?id=#{note._id}')= note.title
+
+
+with divs: (didn't need to treat a as block not inline)
+div.list-group
+  each note, i in notelist
+    a.list-group-item(href='/viewnote?id=#{note._id}')= note.title

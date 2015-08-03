@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p= note.title
+  p= note.text
+  form#formAddUser(name="addnote",method="post",action="/addnote")
+    input#inputNoteTitle(type="text", placeholder="notetitle", name="notetitle")
+    input#inputNoteText(type="text", placeholder="notetext", name="notetext")
+    button#btnSubmit(type="submit") submit

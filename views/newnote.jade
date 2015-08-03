@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddUser(name="addnote",method="post",action="/addnote")
+    div.panel.panel-default
+      div
+        input#inputNoteTitle.form-control(type="text", placeholder="notetitle", name="notetitle")
+      div
+        input#inputNoteText.form-control(type="text", placeholder="notetext", name="notetext" rows="5")
+    button#btnSubmit.btn.btn-default(type="submit") submit
